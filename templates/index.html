@@ -1,603 +1,551 @@
-{% extends "base.html" %}
 
 {% load static %}
-
-
-{% block contect %}
-
-
-
- <!--====== SLIDER PART START ======-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hibiscus Royal Academy</title>
+    <meta name="description" content="A premier educational institution in Abuja, Nigeria">
     
- <section id="slider-part" class="slider-active">
-    <div class="single-slider bg_cover pt-150" style="background-image: url({% static 'images/home1.png' %})" data-overlay="4">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-7 col-lg-9">
-                    <div class="slider-cont">
-                        <h1 data-animation="bounceInLeft" data-delay="1s">Choose the right theme for education</h1>
-                        <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  Sed fringilla mauri amet nibh.</p>
-                        <ul>
-                            <li ><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{% url 'about' %}">Read More</a></li>
-                            <!-- <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">Get Started</a></li> -->
-                        </ul>
-                    </div>
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </div> <!-- single slider -->
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'images/2.png' %}" type="image/x-icon">
     
-    <div class="single-slider bg_cover pt-150" style="background-image: url({% static 'images/home2.png' %})" data-overlay="4">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-7 col-lg-9">
-                    <div class="slider-cont">
-                        <h1 data-animation="bounceInLeft" data-delay="1s">Choose the right theme for education</h1>
-                        <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  Sed fringilla mauri amet nibh.</p>
-                        <ul>
-                            <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{% url 'about' %}">Read More</a></li>
-                            <!-- <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">Get Started</a></li> -->
-                        </ul>
-                    </div>
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </div> <!-- single slider -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <div class="single-slider bg_cover pt-150" style="background-image: url({% static 'images/home3.png' %})" data-overlay="4">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-7 col-lg-9">
-                    <div class="slider-cont">
-                        <h1 data-animation="bounceInLeft" data-delay="1s">Choose the right theme for education</h1>
-                        <p data-animation="fadeInUp" data-delay="1.3s">Donec vitae sapien ut libearo venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt  Sed fringilla mauri amet nibh.</p>
-                        <ul>
-                            <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="{% url 'about' %}">Read More</a></li>
-                            <!-- <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">Get Started</a></li> -->
-                        </ul>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>No 82, 1st Avenue, Efab City Estate, Lokogoma, FCT Abuja.</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@hibiscusroyalacademy.com</span>
+                        </div>
+                    </div>
+                    <div class="opening-hours">
+                        <i class="fas fa-clock"></i>
+                        <span>Opening Hours: Monday to Saturday - 8 Am to 5 Pm</span>
                     </div>
                 </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </div> <!-- single slider -->
-</section>
+            </div>
+        </div>
 
-<!--====== SLIDER PART ENDS ======-->
-
-
-<!--====== CATEGORY PART START ======-->
-
-<section id="category-part">
-    <div class="container" >
-        <div class="category pt-40 pb-80" style="background-color: #28a745;">
-            <div class="row" style="background-color: rgb(168, 206, 186);">
-                <div class="col-lg-4">
-                    <div class="category-text pt-40">
-                        <h2>Best learning for your child</h2>
+        <!-- Logo and Support -->
+        <div class="logo-support">
+            <div class="container">
+                <div class="logo-support-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="{% static 'images/2.png' %}" alt="Hibiscus Royal Academy Logo">
+                            <span>HIBISCUS ROYAL ACADEMY</span>
+                        </a>
+                    </div>
+                    
+                    <div class="support-area">
+                        <div class="support-contact">
+                            <div class="icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="content">
+                                <p>Need Help? call us</p>
+                                <span>+234 8167791934</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#" class="btn btn-primary">Apply Now</a>
+                    </div>
+                    
+                    <div class="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
                     </div>
                 </div>
-                <div class="col-lg-6 offset-lg-1 col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-8 offset-2">
-                    <div class="row category-slied mt-40">
-                        <div class="col-lg-4">
-                            <a href="#">
-                                <span class="singel-category text-center color-1">
-                                    <span class="icon">
-                                        <!-- <img src="{% static 'images/all-icon/ctg-1.png' %}" alt="Icon"> -->
-                                    </span>
-                                    <span class="cont">
-                                        <span>Language</span>
-                                    </span>
-                                </span> <!-- singel category -->
-                            </a>
-                        </div>
-                        <div class="col-lg-4">
-                            <a href="#">
-                                <span class="singel-category text-center color-2">
-                                    <span class="icon">
-                                        <!-- <img src="{% static 'images/all-icon/ctg-2.png' %}" alt="Icon"> -->
-                                    </span>
-                                    <span class="cont">
-                                        <span>Extracurricular Activity</span>
-                                    </span>
-                                </span> <!-- singel category -->
-                            </a>
-                        </div>
-                        <div class="col-lg-4">
-                            <a href="#">
-                                <span class="singel-category text-center color-3">
-                                    <span class="icon">
-                                        <!-- <img src="{% static 'images/all-icon/ctg-3.png' %}" alt="Icon"> -->
-                                    </span>
-                                    <span class="cont">
-                                        <span>Vocational Clubs</span>
-                                    </span>
-                                </span> <!-- singel category -->
-                            </a>
-                        </div>
-                        <div class="col-lg-4">
-                            <a href="#">
-                                <span class="singel-category text-center color-1">
-                                    <span class="icon">
-                                        <img src="{% static 'images/all-icon/ctg-1.png' %}" alt="Icon">
-                                    </span>
-                                    <span class="cont">
-                                        <span>Language</span>
-                                    </span>
-                                </span> <!-- singel category -->
-                            </a>
-                        </div>
-                        <div class="col-lg-4">
-                            <a href="#">
-                                <span class="singel-category text-center color-2">
-                                    <span class="icon">
-                                        <img src="{% static 'images/all-icon/ctg-2.png' %}" alt="Icon">
-                                    </span>
-                                    <span class="cont">
-                                        <span>Business</span>
-                                    </span>
-                                </span> <!-- singel category -->
-                            </a>
-                        </div>
-                        <div class="col-lg-4">
-                            <a href="#">
-                                <span class="singel-category text-center color-3">
-                                    <span class="icon">
-                                        <img src="{% static 'images/all-icon/ctg-3.png' %}" alt="Icon">
-                                    </span>
-                                    <span class="cont">
-                                        <span>Literature</span>
-                                    </span>
-                                </span> <!-- singel category -->
-                            </a>
-                        </div>
-                    </div> <!-- category slied -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- category -->
-    </div> <!-- container -->
-</section>
-
-<!--====== CATEGORY PART ENDS ======-->
-
-<!--====== ABOUT PART START ======-->
-
-
-
-<section id="about-part" class="pt-65">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <div class="section-title mt-50">
-                    <h5 >About us</h5>
-                    <h2>Welcome to Hibiscus Royal Academy </h2>
-                </div> <!-- section title -->
-                <div class="about-cont">
-                    <p >Hibiscus Royal Academy is a co-educational boarding school located in Abuja, Nigeria. It was established in 2008 and is known for its serene environment, conducive for learning. The 
-                        school offers a blend of Nigerian and British curricula, providing a well-rounded education to its students.</p>
-                    <a href="{% url 'about' %}" class="main-btn mt-55" style="color: white; background-color:red;">Download Newslatter</a>
-                </div>
-            </div> <!-- about cont -->
-            <div class="col-lg-6 offset-lg-1">
-                <div class="about-event mt-50">
-                    <div class="event-title">
-                        <h3>Hibiscus Royal Academy</h3>
-                    </div> <!-- event title -->
-                    <ul>
-                        <li>
-                            <div class="singel-event">
-                                <!-- <span><i class="fa fa-calendar"></i> 2 December 2018</span> -->
-                                <a href="events-singel.html"><h4> QUICK ADMISSION</h4></a><span><i class="fa fa-clock-o"></i>Online entrance examination is written after registration to enable quick admission of students.  </span>
-                                <!-- <span><i class="fa fa-map-marker"></i> Rc Auditorim</span> -->
-                               
-                            </div>
-                        </li>
-                        <li>
-                            <div class="singel-event">
-                                <!-- <span><i class="fa fa-calendar"></i> 2 December 2018</span> -->
-                                <a href="events-singel.html"><h4>CURRICULUM
-                                    </h4></a>
-                                <span><i class="fa fa-clock-o"></i>We offer Nigerian and British Curricula</span>
-                                <!-- <span><i class="fa fa-map-marker"></i> Rc Auditorim</span> -->
-                            </div>
-                        </li>
-                        <li>
-                            <div class="singel-event">
-                                <!-- <span><i class="fa fa-calendar"></i> 2 December 2018</span> -->
-                                <a href="events-singel.html"><h4>EFFICIENT LEARNING
-                                    </h4></a>
-                                <span><i class="fa fa-clock-o"></i> Our learners are taught by skilled and qualified teachers making use of our curriculum, with this, the future is guaranteed.</span>
-                                <!-- <span><i class="fa fa-map-marker"></i> Rc Auditorim</span> -->
-                            </div>
-                        </li>
-                    </ul> 
-                </div> <!-- about event -->
             </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
-    <div class="about-bg">
-        <img src="{% static 'images/about3.png' %}" alt="About">
+        </div>
 
-    </div>
-</section>
-
-
-<!--====== ABOUT PART ENDS ======-->
-
-<!--====== APPLY PART START ======-->
-
-<section id="apply-aprt" class="pb-120">
-    <div class="container"  >
-        <div class="apply">
-            <div class="row no-gutters" >
-                <div class="col-lg-15">
-                    <div class="apply-cont apply-color-1"  style="background-color: #28a745;">
-                        <h3>Apply for fall 2025</h3>
-                        <p>Gravida nibh vel velit auctor aliquetn sollicitudirem sem quibibendum auci elit cons equat ipsutis sem nibh id elituis sed odio sit amet nibh vulputate cursus equat ipsutis.</p>
-                        <a href="{% url 'contact' %}" class="main-btn">Apply Now</a>
-                    </div> <!-- apply cont -->
-                </div>
-                <!-- <div class="col-lg-6">
-                    <div class="apply-cont apply-color-2" style="background-color: rgb(106, 121, 113);">
-                        <h3>Apply for scholarship</h3>
-                        <p>Gravida nibh vel velit auctor aliquetn sollicitudirem sem quibibendum auci elit cons equat ipsutis sem nibh id elituis sed odio sit amet nibh vulputate cursus equat ipsutis.</p>
-                        <a href="{% url 'contact' %}" class="main-btn">Apply Now</a>
-                    </div> apply cont
-                </div>  -->
-            </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
-</section>
-
-<!--====== APPLY PART ENDS ======-->
-
-
-
-<!--====== VIDEO FEATURE PART START ======-->
-
-<section id="video-feature" class="bg_cover pt-60 pb-110" style="background-image: url({% static 'images/home1.png' %})">
-    <div class="container" >
-        <div class="row align-items-center">
-            <div class="col-lg-6 order-last order-lg-first">
-                <div class="video text-lg-left text-center pt-50">
-                    <a class="Video-popup" href="{% static 'images/video_home.mp4' %}"><i class="fa fa-play"></i></a>
-                </div> <!-- row -->
-            </div>
-            <div class="col-lg-5 offset-lg-1 order-first order-lg-last" style="background-color: rgb(106, 121, 113);" >
-                <div class="feature pt-50" >
-                    <div class="feature-title">
-                        <h3>WHAT'S HAPPENING?</h3>
-                    </div>
-                    <ul>
-                        <li>
-                            <div class="singel-feature">
-                                <div class="icon">
-                                    <!-- <img src="{% static 'images/all-icon/f-1.png' %}" alt="icon"> -->
-                                </div>
-                                <div class="cont">
-                                    <h4>NEWSLETTER – 
-                                         </h4>
-                                    <p>Dear Esteemed Parents, WELCOME NEWSLETTERWelcome back to Term 2. We hope you have had an enjoyable holiday, we are so confident that each learner.</p>
-                                </div>
-                            </div> <!-- singel feature -->
-                        </li>
-                        <li>
-                            <div class="singel-feature">
-                                <div class="icon">
-                                    <!-- <img src="{% static 'images/all-icon/f-2.png' %}" alt="icon"> -->
-                                </div>
-                                <div class="cont">
-                                    <h4>MID-TERM NEWSLETTER 2025/2026</h4>
-                                    <p>Dear Esteemed Parents, Finally, we have come to the end of the first half of Term 1, 2025/2026 session. On behalf of the Management, </p>
-                                </div>
-                            </div> <!-- singel feature -->
-                        </li>
-                        <li>
-                            <div class="singel-feature">
-                                <div class="icon">
-                                    <!-- <img src="{% static 'images/all-icon/f-3.png' %}" alt="icon"> -->
-                                </div>
-                                <div class="cont">
-                                    <h4>How To Apply</h4>
-                                    <p> Click to get guidelines or steps on how to register your wards on  Hibiscus Royal Academy Abuja.</p>
-                                </div>
-                            </div> <!-- singel feature -->
-                        </li>
+        <!-- Navigation -->
+        <nav class="navigation">
+            <div class="container">
+                <div class="nav-content">
+                    <ul class="main-menu">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="teachers.html">Our teachers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="curriculum.html">Our curriculum</a></li>
                     </ul>
-                </div> <!-- feature -->
+                    
+                    <div class="portal-link">
+                        <a href="https://nel-sms.onrender.com/">E-PORTAL</a>
+                    </div>
+                </div>
             </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
-    <div class="feature-bg"></div> <!-- feature bg -->
-</section>
+        </nav>
 
-<!--====== VIDEO FEATURE PART ENDS ======-->
-
-<!--====== TEACHERS PART START ======-->
-
-<section id="teachers-part" class="pt-70 pb-120">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <div class="section-title mt-50">
-                    <h5> Teachers</h5>
-                    <h2>Meet Our teachers</h2>
-                </div> <!-- section title -->
-                <div class="teachers-cont">
-                    <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt  mauris. <br> <br> auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet . Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt  mauris</p>
-                    {% comment %} <a href="#" class="main-btn mt-55">Career with us</a> {% endcomment %}
-                </div> <!-- teachers cont -->
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav">
+            <div class="container">
+                <ul class="mobile-menu">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="teachers.html">Our teachers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="curriculum.html">Our curriculum</a></li>
+                    <li><a href="https://nel-sms.onrender.com/">E-PORTAL</a></li>
+                    <li><a href="#" class="btn btn-primary mobile-apply">Apply Now</a></li>
+                </ul>
             </div>
-            <div class="col-lg-6 offset-lg-1">
-                <div class="teachers mt-20">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <!-- <div class="singel-teachers mt-30 text-center">
-                                <div class="image">
-                                    <img src="{% static 'images/about3.png' %}" alt="Teachers">
-                                </div>
-                                <div class="cont">
-                                    <a href="teachers-singel.html"><h6>Mark alen</h6></a>
-                                    <span>Vice chencelor</span>
-                                </div>
-                            </div> singel teachers -->
-                        </div>
-                        <!-- <div class="col-sm-6">
-                            <div class="singel-teachers mt-30 text-center">
-                                <div class="image">
-                                    <img src="{% static 'images/about1.png' %}" alt="Teachers">
-                                </div>
-                                <div class="cont">
-                                    <a href="teachers-singel.html"><h6>David card</h6></a>
-                                    <span>Pro chencelor</span>
-                                </div>
-                            </div> singel teachers
-                        </div> -->
-                        <div class="col-sm-6">
-                            <div class="singel-teachers mt-30 text-center">
-                                <div class="image">
-                                    <img src="{% static 'images/about1.png' %}" alt="Teachers">
-                                </div>
-                                <div class="cont">
-                                    <a href="teachers-singel.html"><h6>Rebeka alig</h6></a>
-                                    <span>Pro chencelor</span>
-                                </div>
-                            </div> <!-- singel teachers -->
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="singel-teachers mt-30 text-center">
-                                <div class="image">
-                                    <img src="{% static 'images/about1.png' %}" alt="Teachers">
-                                </div>
-                                <div class="cont">
-                                    <a href="teachers-singel.html"><h6>Hanna bein</h6></a>
-                                    <span>Aerobics head</span>
-                                </div>
-                            </div> <!-- singel teachers -->
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- teachers -->
-            </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
-</section>
+        </div>
+    </header>
 
-<!--====== TEACHERS PART ENDS ======-->
-
-<!-- <video class="pt-70 pb-120" width="1020" height="240" src="{% static 'images/video_home.mp4' %}" controls ></video> -->
+    <!-- Hero Slider Section -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <div class="slide-bg" style="background-image: url('{% static 'images/home2.png' %}');"></div>
 
 
-<!--====== TEASTIMONIAL PART START ======-->
-
-<section id="testimonial" class="bg_cover pt-115 pb-115" data-overlay="8" style="background-image: url({% static 'images/about1.png' %})" >
-    <div class="container" style="background-color:rgb(0, 255, 110);">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="section-title pb-40" style="background-color:rgb(0, 0, 0);">
-                    {% comment %} <h5>Testimonial</h5> {% endcomment %}
-                    <h2>What they say</h2>
-                </div> <!-- section title -->
-            </div>
-        </div> <!-- row -->
-        <div class="row testimonial-slied mt-40">
-            <div class="col-lg-6">
-                <div class="singel-testimonial">
-                    <div class="testimonial-thum">
-                        <img src="{% static 'images/testimonial/t-1.jpg' %}" alt="Testimonial">
-                        <div class="quote">
-                            <i class="fa fa-quote-right"></i>
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="slide-content">
+                        <h1 class="animate-fade-in">Choose the right theme for education</h1>
+                        <p class="animate-slide-up">Providing quality education and nurturing young minds for a brighter future. Join us on this journey of excellence and growth.</p>
+                        <div class="buttons animate-slide-up">
+                            <a href="about.html" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
-                    <div class="testimonial-cont">
-                        <p>Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet sem nibh id elit sollicitudirem </p>
-                        <h6>Rubina Helen</h6>
-                        <span>Bsc, Engineering</span>
-                    </div>
-                </div> <!-- singel testimonial -->
+                </div>
             </div>
-            <div class="col-lg-6">
-                <div class="singel-testimonial">
-                    <div class="testimonial-thum">
-                        <img src="{% static 'images/testimonial/t-2.jpg' %}" alt="Testimonial">
-                        <div class="quote">
-                            <i class="fa fa-quote-right"></i>
+            
+            <div class="slide">
+                <div class="slide-bg" style="background-image: url('{% static 'images/home1.png' %}');"></div>
+
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="slide-content">
+                        <h1>Building future leaders</h1>
+                        <p>Our comprehensive curriculum and dedicated faculty ensure that students develop both academically and personally.</p>
+                        <div class="buttons">
+                            <a href="about.html" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
-                    <div class="testimonial-cont">
-                        <p>Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet sem nibh id elit sollicitudirem </p>
-                        <h6>Rubina Helen</h6>
-                        <span>Bsc, Engineering</span>
-                    </div>
-                </div> <!-- singel testimonial -->
+                </div>
             </div>
-            <div class="col-lg-6">
-                <div class="singel-testimonial">
-                    <div class="testimonial-thum">
-                        <img src="{% static 'images/testimonial/t-3.jpg' %}" alt="Testimonial">
-                        <div class="quote">
-                            <i class="fa fa-quote-right"></i>
+            
+            <div class="slide">
+                <div class="slide-bg" style="background-image: url('{% static 'images/home3.png' %}');"></div>
+
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="slide-content">
+                        <h1>A nurturing environment</h1>
+                        <p>We create a safe and supportive atmosphere where students can explore their potential and develop their talents.</p>
+                        <div class="buttons">
+                            <a href="about.html" class="btn btn-primary">Read More</a>
                         </div>
                     </div>
-                    <div class="testimonial-cont">
-                        <p>Aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet sem nibh id elit sollicitudirem </p>
-                        <h6>Rubina Helen</h6>
-                        <span>Bsc, Engineering</span>
-                    </div>
-                </div> <!-- singel testimonial -->
+                </div>
             </div>
-        </div> <!-- testimonial slied -->
-    </div> <!-- container -->
-</section>
-
-<!--====== TEASTIMONIAL PART ENDS ======-->
-
-<!--====== NEWS PART START ======-->
-
-
-
-{% comment %} <section id="news-part" class="pt-115 pb-110">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="section-title pb-50">
-                    <h5>Latest News</h5>
-                    <h2>From the news</h2>
-                </div> <!-- section title -->
+            
+            <!-- Slider Navigation -->
+            <button class="slider-nav prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-nav next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Slider Indicators -->
+            <div class="slider-indicators">
+                <button class="indicator active" data-slide="0"></button>
+                <button class="indicator" data-slide="1"></button>
+                <button class="indicator" data-slide="2"></button>
             </div>
-        </div> <!-- row -->
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="singel-news mt-30">
-                    <div class="news-thum pb-25">
-                        <img src="{% static 'images/news/n-1.jpg' %}" alt="News">
+        </div>
+    </section>
+
+    <!-- Category Section -->
+    <section class="category-section">
+        <div class="container">
+            <div class="category-box">
+                <div class="category-text">
+                    <h2>Best learning for your child</h2>
+                    <p>We provide a comprehensive education that nurtures academic excellence, character development, and lifelong learning.</p>
+                </div>
+                
+                <div class="category-items">
+                    <div class="category-item">
+                        <div class="icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Language</h3>
                     </div>
-                    <div class="news-cont">
+                    
+                    <div class="category-item">
+                        <div class="icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Extracurricular Activity</h3>
+                    </div>
+                    
+                    <div class="category-item">
+                        <div class="icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Vocational Clubs</h3>
+                    </div>
+                    
+                    <div class="category-item">
+                        <div class="icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Arts</h3>
+                    </div>
+                    
+                    <div class="category-item">
+                        <div class="icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h3>Music</h3>
+                    </div>
+                    
+                    <div class="category-item">
+                        <div class="icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Technology</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-title">
+                        <h5>About us</h5>
+                        <h2>Welcome to Hibiscus Royal Academy</h2>
+                    </div>
+                    <p>Hibiscus Royal Academy is a co-educational boarding school located in Abuja, Nigeria. It was established in 2008 and is known for its serene environment, conducive for learning. The school offers a blend of Nigerian and British curricula, providing a well-rounded education to its students.</p>
+                    <a href="about.html" class="btn btn-primary">Download Newsletter</a>
+                </div>
+                
+                <div class="about-events">
+                    <h3>Hibiscus Royal Academy</h3>
+                    
+                    <div class="event-item">
+                        <h4>QUICK ADMISSION</h4>
+                        <p><i class="fas fa-calendar"></i> Online entrance examination is written after registration to enable quick admission of students.</p>
+                    </div>
+                    
+                    <div class="event-item">
+                        <h4>CURRICULUM</h4>
+                        <p><i class="fas fa-calendar"></i> We offer Nigerian and British Curricula</p>
+                    </div>
+                    
+                    <div class="event-item">
+                        <h4>EFFICIENT LEARNING</h4>
+                        <p><i class="fas fa-calendar"></i> Our learners are taught by skilled and qualified teachers making use of our curriculum, with this, the future is guaranteed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply Section -->
+    <section class="apply-section">
+        <div class="container">
+            <div class="apply-box">
+                <h3>Apply for fall 2025</h3>
+                <p>Join our community of learners and experience quality education in a nurturing environment. Our application process is straightforward, and our admissions team is ready to guide you through each step.</p>
+                <a href="contact.html" class="btn btn-white">Apply Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Feature Section -->
+        
+    <section class="video-feature" style="background-image: url({% static 'images/home1.png' %})">
+        
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="video-content">
+                <div class="video-play">
+                    <button class="play-btn" id="videoPlayBtn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="video-container" id="videoContainer">
+                        <!-- Video will be loaded here via JavaScript -->
+                         
+                    </div>
+                </div>
+                
+                <div class="feature-content">
+                    <h3>WHAT'S HAPPENING?</h3>
+                    
+                    <div class="feature-item">
+                        <div class="icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="text">
+                            <h4>NEWSLETTER</h4>
+                            <p>Dear Esteemed Parents, WELCOME NEWSLETTER. Welcome back to Term 2. We hope you have had an enjoyable holiday, we are so confident that each learner will excel this term.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="text">
+                            <h4>MID-TERM NEWSLETTER 2025/2026</h4>
+                            <p>Dear Esteemed Parents, Finally, we have come to the end of the first half of Term 1, 2025/2026 session. On behalf of the Management, we thank you for your support.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="text">
+                            <h4>How To Apply</h4>
+                            <p>Click to get guidelines or steps on how to register your wards on Hibiscus Royal Academy Abuja.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section class="teachers-section">
+        <div class="container">
+            <div class="teachers-content">
+                <div class="teachers-text">
+                    <div class="section-title">
+                        <h5>Teachers</h5>
+                        <h2>Meet Our teachers</h2>
+                    </div>
+                    <p>Our faculty consists of experienced and dedicated professionals who are passionate about education. They bring a wealth of knowledge and expertise to the classroom, creating an engaging and stimulating learning environment.</p>
+                    <p>Our teachers are committed to the holistic development of each student, focusing not only on academic excellence but also on character building and personal growth.</p>
+                </div>
+                
+                <div class="teachers-grid">
+                    <div class="teacher-card">
+                        <div class="teacher-image">
+                            <img src="{% static 'images/about1.png' %}" alt="Rebeka Alig">
+                            <div class="teacher-info">
+                                <a href="teachers.html">
+                                    <h6>Rebeka Alig</h6>
+                                </a>
+                                <span>Pro Chancellor</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="teacher-card">
+                        <div class="teacher-image">
+                            <img src="{% static 'images/about2.png' %}" alt="Hanna Bein">
+                            <div class="teacher-info">
+                                <a href="teachers.html">
+                                    <h6>Hanna Bein</h6>
+                                </a>
+                                <span>Aerobics Head</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial-section" style="background-image: url('{% static 'images/about3.png' %}');">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>What they say</h2>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/about1.png' %}" alt="Rubina Helen">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-text">
+                            <p>"The teachers at Hibiscus Royal Academy are exceptional. They've helped my child grow academically and personally. The school's approach to education is holistic and effective."</p>
+                            <h6>Rubina Helen</h6>
+                            <span>Parent</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/about2.png' %}" alt="Sarah Williams">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-text">
+                            <p>"We've been impressed with the quality of education and the caring environment at Hibiscus Royal Academy. Our children are thriving and look forward to school every day."</p>
+                            <h6>Michael Johnson</h6>
+                            <span>Parent</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <div class="testimonial-image">
+                            <img src="{% static 'images/about3.png' %}" alt="Sarah Williams">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="testimonial-text">
+                            <p>"My years at Hibiscus Royal Academy prepared me well for university and beyond. The teachers were supportive and the curriculum was challenging in the best way possible."</p>
+                            <h6>Sarah Williams</h6>
+                            <span>Former Student</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial Navigation -->
+                <button class="testimonial-nav prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="testimonial-nav next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Testimonial Indicators -->
+                <div class="testimonial-indicators">
+                    <button class="indicator active" data-slide="0"></button>
+                    <button class="indicator" data-slide="1"></button>
+                    <button class="indicator" data-slide="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-about">
+                        <div class="footer-logo">
+                            <img src="{% static 'images/2.png' %}" alt="Hibiscus Royal Academy Logo">
+                            <h3>Hibiscus Royal</h3>
+                        </div>
+                        <p>Hibiscus Royal Academy is a co-educational boarding school located in Abuja, Nigeria. It was established in 2008 and is known for its serene environment, conducive for learning. The school offers a blend of Nigerian and British curricula, providing a well-rounded education to its students.</p>
+                        <div class="social-links">
+                            <a href="https://web.facebook.com/profile.php?id=100091881648301" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/hibiscus_royal_academy/" class="instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <h3>Sitemap</h3>
+                        <div class="links-columns">
+                            <ul>
+                                <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                                <li><a href="about.html"><i class="fas fa-angle-right"></i> About us</a></li>
+                                <li><a href="events.html"><i class="fas fa-angle-right"></i> Events</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Gallery</a></li>
+                                <li><a href="teachers.html"><i class="fas fa-angle-right"></i> Teachers</a></li>
+                                <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-support">
+                        <h3>Support</h3>
                         <ul>
-                            <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                            <li><a href="#"> <span>By</span> Adam linn</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> FAQs</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Privacy</a></li>
+                            <li><a href="#"><i class="fas fa-angle-right"></i> Policy</a></li>
                         </ul>
-                        <a href="blog-singel.html"><h3>Tips to grade high cgpa in university life</h3></a>
-                        <p>Lorem ipsum gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt .</p>
                     </div>
-                </div> <!-- singel news -->
-            </div>
-            <div class="col-lg-6">
-                <div class="singel-news news-list">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="news-thum mt-30">
-                                <img src="{% static 'images/news/ns-1.jpg' %}" alt="News">
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="news-cont mt-30">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                                    <li><a href="#"> <span>By</span> Adam linn</a></li>
-                                </ul>
-                                <a href="blog-singel.html"><h3>Intellectual communication</h3></a>
-                                <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons  vel.</p>
-                            </div>
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- singel news -->
-                <div class="singel-news news-list">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="news-thum mt-30">
-                                <img src="{% static 'images/news/ns-2.jpg' %}" alt="News">
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="news-cont mt-30">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                                    <li><a href="#"> <span>By</span> Adam linn</a></li>
-                                </ul>
-                                <a href="blog-singel.html"><h3>Study makes you perfect</h3></a>
-                                <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons  vel.</p>
-                            </div>
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- singel news -->
-                <div class="singel-news news-list">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="news-thum mt-30">
-                                <img src="{% static 'images/news/ns-3.jpg' %}" alt="News">
-                            </div>
-                        </div>
-                        <div class="col-sm-8">
-                            <div class="news-cont mt-30">
-                                <ul>
-                                    <li><a href="#"><i class="fa fa-calendar"></i>2 December 2018 </a></li>
-                                    <li><a href="#"> <span>By</span> Adam linn</a></li>
-                                </ul>
-                                <a href="blog-singel.html"><h3>Technology edcution is now....</h3></a>
-                                <p>Gravida nibh vel velit auctor aliquetn sollicitudirem quibibendum auci elit cons  vel.</p>
-                            </div>
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- singel news -->
-            </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
-</section> {% endcomment %}
-
-
-
-<!--====== NEWS PART ENDS ======-->
-
-<!--====== PATNAR LOGO PART START ======-->
-
-<!-- <div id="patnar-logo" class="pt-40 pb-80 gray-bg">
-    <div class="container">
-        <div class="row patnar-slied">
-            <div class="col-lg-12">
-                <div class="singel-patnar text-center mt-40">
-                    <img src="{% static 'images/patnar-logo/p-1.png' %}" alt="Logo">
+                    
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>No 82, 1st Avenue, Efab City Estate, Lokogoma, FCT Abuja.</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+234 9064 366 533</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>info@hibiscusroyalacademy.com</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-12">
-                <div class="singel-patnar text-center mt-40">
-                    <img src="{% static 'images/patnar-logo/p-2.png' %}" alt="Logo">
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="copyright">
+                    <div class="left">
+                        <a href="http://nel247.onrender.com/">NELTchnology</a>
+                    </div>
+                    <div class="right">
+                        <p>© <span id="currentYear"></span> Hibiscus Royal Academy. All rights reserved.</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-12">
-                <div class="singel-patnar text-center mt-40">
-                    <img src="{% static 'images/patnar-logo/p-3.png' %}" alt="Logo">
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="singel-patnar text-center mt-40">
-                    <img src="{% static 'images/patnar-logo/p-4.png' %}" alt="Logo">
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="singel-patnar text-center mt-40">
-                    <img src="{% static 'images/patnar-logo/p-2.png' %}" alt="Logo">
-                </div>
-            </div>
-            <div class="col-lg-12">
-                <div class="singel-patnar text-center mt-40">
-                    <img src="{% static 'images/patnar-logo/p-3.png' %}" alt="Logo">
-                </div>
-            </div>
-        </div> row
-    </div> container
-</div>  -->
+        </div>
+    </footer>
 
-<!--====== PATNAR LOGO PART ENDS ======-->
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
-<!-- <div class="row align-items-center">
-    <div class="col-lg-6 order-last order-lg-first">
-        <div class="video text-lg-left text-center pt-50">
-            <a class="Video-popup" href="{% static 'images/video_home.mp4' %}"><i class="fa fa-play"></i></a>
-        </div> 
-    </div>
-    <div class="col-lg-5 offset-lg-1 order-first order-lg-last" style="background-color: rgb(106, 121, 113);" >
-       
-    </div>
-</div> -->
-
-
-{% endblock contect %}
+    <!-- JavaScript -->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
